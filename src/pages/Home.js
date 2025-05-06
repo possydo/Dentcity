@@ -7,12 +7,12 @@ const Home = () => {
         <header>
             <div className="container">
                 <div className="row">
-                    <div className="col-md-8 col-lg-8">
+                    <div className="col-md-6 col-lg-6">
                         <h2>We provide All health care solution</h2>
                         <button><a href="#"> read more </a></button>
 
                     </div>
-                    <div className="col-md-4 col-lg-4">
+                    <div className="col-md-6 col-lg-6">
                         <img src={doc} title="dentcity"/>
                     </div>
                 </div>

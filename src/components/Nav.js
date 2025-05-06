@@ -7,20 +7,26 @@ import {
 } from 'react-bootstrap';
 import './Nav.css';
 import dent from '../assets/dent.png';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowAltCircleRight, faSearch } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
+
+
+
+
 
 const Navs = () => {
   return (
     <Navbar>
       <Container>
         <Navbar.Brand>
-          <img src={dent} title="Dentcity" id="dentist1" />
+          <img src={dent} title="Dentcity" id="dentist1" alt="" />
           <h1 id="text">DenTcity</h1>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-
+            <Link to="/Home">Home</Link>
             <NavDropdown title="pages" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">
                 Login or register
@@ -41,12 +47,18 @@ const Navs = () => {
               <NavDropdown.Item href="#action/3.1">Details</NavDropdown.Item>
             </NavDropdown>
 
-            <Nav.Link href="#home">contact us</Nav.Link>
-            <Nav.Link href="#home">search</Nav.Link>
+            <Link to="/Contact">contact us</Link>
+            <Nav.Link href="#Home">
+              search
+              <FontAwesomeIcon id="search" icon={faSearch} />
+            </Nav.Link>
             <Nav.Link href="#home">
-              <div id= "btn1">
+              <div id="btn1">
                 <button>
-                  Appointment<span> > </span>
+                  <Link to="/Booking">Appointment</Link>
+                  <span>
+                    <FontAwesomeIcon icon={faArrowAltCircleRight} />
+                  </span>
                 </button>
               </div>
             </Nav.Link>

@@ -93,3 +93,11 @@ nav .navbar-nav button span{
             margin-bottom: 0px;
         }
 }
+#search{
+    margin-left: 10px !important;
+
+}
+nav .navbar-nav svg:last-child{
+    text-align: center;
+
+}
